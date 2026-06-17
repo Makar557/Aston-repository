@@ -1,0 +1,34 @@
+STUDENT: Ivan Ivanov
+BOOK: Clean Code | 464 | Robert Martin | 2008-08-01
+BOOK: Effective Java | 416 | Joshua Bloch | 2018-01-06
+BOOK: Refactoring | 448 | Martin Fowler | 2019-11-19
+BOOK: Clean Code | 464 | Robert Martin | 2008-08-01
+BOOK: Java Concurrency in Practice | 432 | Brian Goetz | 2006-05-19
+
+STUDENT: Petr Petrov
+BOOK: Design Patterns | 395 | GoF | 1994-10-31
+BOOK: Effective Java | 416 | Joshua Bloch | 2018-01-06
+BOOK: Algorithms | 600 | Robert Sedgewick | 2011-04-04
+BOOK: Clean Architecture | 432 | Robert Martin | 2017-09-20
+BOOK: Refactoring | 448 | Martin Fowler | 2019-11-19
+
+STUDENT: Alex Smirnov
+BOOK: Thinking in Java | 1150 | Bruce Eckel | 2006-02-20
+BOOK: Effective Java | 416 | Joshua Bloch | 2018-01-06
+BOOK: Java Performance | 480 | Scott Oaks | 2014-10-15
+BOOK: Clean Code | 464 | Robert Martin | 2008-08-01
+BOOK: Microservices Patterns | 520 | Chris Richardson | 2018-11-19
+
+STUDENT: Maria Sokolova
+BOOK: Head First Design Patterns | 694 | Eric Freeman | 2004-10-25
+BOOK: Java Basics | 300 | Some Author | 2020-03-01
+BOOK: Algorithms Unlocked | 240 | Thomas Cormen | 2013-03-01
+BOOK: Clean Code | 464 | Robert Martin | 2008-08-01
+BOOK: Domain-Driven Design | 560 | Eric Evans | 2003-08-30
+
+STUDENT: Dmitry Orlov
+BOOK: Groovy in Action | 700 | Dierk König | 2015-01-10
+BOOK: Kotlin in Action | 360 | Dmitry Jemerov | 2017-02-19
+BOOK: Effective Java | 416 | Joshua Bloch | 2018-01-06
+BOOK: Clean Code | 464 | Robert Martin | 2008-08-01
+BOOK: Spring Boot Up & Running | 420 | Mark Heckler | 2021-09-14

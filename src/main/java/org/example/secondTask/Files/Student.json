@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Ivan Ivanov",
+    "listOfBooks": [
+      {
+        "name": "Clean Code",
+        "numberOfPages": 464,
+        "author": "Robert Martin",
+        "date": "2008-08-01"
+      },
+      {
+        "name": "Effective Java",
+        "numberOfPages": 416,
+        "author": "Joshua Bloch",
+        "date": "2018-01-06"
+      },
+      {
+        "name": "Refactoring",
+        "numberOfPages": 448,
+        "author": "Martin Fowler",
+        "date": "2019-11-19"
+      },
+      {
+        "name": "Clean Code",
+        "numberOfPages": 464,
+        "author": "Robert Martin",
+        "date": "2008-08-01"
+      },
+      {
+        "name": "Java Concurrency in Practice",
+        "numberOfPages": 432,
+        "author": "Brian Goetz",
+        "date": "2006-05-19"
+      }
+    ]
+  },
+  {
+    "name": "Petr Petrov",
+    "listOfBooks": [
+      {
+        "name": "Design Patterns",
+        "numberOfPages": 395,
+        "author": "GoF",
+        "date": "1994-10-31"
+      },
+      {
+        "name": "Effective Java",
+        "numberOfPages": 416,
+        "author": "Joshua Bloch",
+        "date": "2018-01-06"
+      },
+      {
+        "name": "Algorithms",
+        "numberOfPages": 600,
+        "author": "Robert Sedgewick",
+        "date": "2011-04-04"
+      },
+      {
+        "name": "Clean Architecture",
+        "numberOfPages": 432,
+        "author": "Robert Martin",
+        "date": "2017-09-20"
+      },
+      {
+        "name": "Refactoring",
+        "numberOfPages": 448,
+        "author": "Martin Fowler",
+        "date": "2019-11-19"
+      }
+    ]
+  },
+  {
+    "name": "Alex Smirnov",
+    "listOfBooks": [
+      {
+        "name": "Thinking in Java",
+        "numberOfPages": 1150,
+        "author": "Bruce Eckel",
+        "date": "2006-02-20"
+      },
+      {
+        "name": "Effective Java",
+        "numberOfPages": 416,
+        "author": "Joshua Bloch",
+        "date": "2018-01-06"
+      },
+      {
+        "name": "Java Performance",
+        "numberOfPages": 480,
+        "author": "Scott Oaks",
+        "date": "2014-09-10"
+      },
+      {
+        "name": "Clean Code",
+        "numberOfPages": 464,
+        "author": "Robert Martin",
+        "date": "2008-08-01"
+      },
+      {
+        "name": "Microservices Patterns",
+        "numberOfPages": 520,
+        "author": "Chris Richardson",
+        "date": "2018-11-19"
+      }
+    ]
+  },
+  {
+    "name": "Maria Sokolova",
+    "listOfBooks": [
+      {
+        "name": "Head First Design Patterns",
+        "numberOfPages": 694,
+        "author": "Eric Freeman",
+        "date": "2004-10-25"
+      },
+      {
+        "name": "Java Basics",
+        "numberOfPages": 300,
+        "author": "Some Author",
+        "date": "2020-01-15"
+      },
+      {
+        "name": "Algorithms Unlocked",
+        "numberOfPages": 240,
+        "author": "Thomas Cormen",
+        "date": "2013-03-01"
+      },
+      {
+        "name": "Clean Code",
+        "numberOfPages": 464,
+        "author": "Robert Martin",
+        "date": "2008-08-01"
+      },
+      {
+        "name": "Domain-Driven Design",
+        "numberOfPages": 560,
+        "author": "Eric Evans",
+        "date": "2003-08-30"
+      }
+    ]
+  },
+  {
+    "name": "Dmitry Orlov",
+    "listOfBooks": [
+      {
+        "name": "Groovy in Action",
+        "numberOfPages": 700,
+        "author": "Dierk König",
+        "date": "2015-01-10"
+      },
+      {
+        "name": "Kotlin in Action",
+        "numberOfPages": 360,
+        "author": "Dmitry Jemerov",
+        "date": "2017-02-19"
+      },
+      {
+        "name": "Effective Java",
+        "numberOfPages": 416,
+        "author": "Joshua Bloch",
+        "date": "2018-01-06"
+      },
+      {
+        "name": "Clean Code",
+        "numberOfPages": 464,
+        "author": "Robert Martin",
+        "date": "2008-08-01"
+      },
+      {
+        "name": "Spring Boot Up & Running",
+        "numberOfPages": 420,
+        "author": "Mark Heckler",
+        "date": "2021-07-20"
+      }
+    ]
+  }
+]
