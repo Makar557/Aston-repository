@@ -16,10 +16,6 @@ public class Student {
         return listOfBooks;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Student(String name, List<Book> listOfBooks) {
         if (listOfBooks.size() < 5) {
             throw new IllegalArgumentException("There must be 5 or more books");
