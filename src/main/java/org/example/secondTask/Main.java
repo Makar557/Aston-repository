@@ -42,6 +42,6 @@ public class Main
         }
 
         servise.resultOfFourthTask(students);
-
+        System.out.println("dd");
     }
 }
