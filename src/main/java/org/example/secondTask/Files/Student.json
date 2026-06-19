@@ -88,7 +88,7 @@
         "name": "Java Performance",
         "numberOfPages": 480,
         "author": "Scott Oaks",
-        "date": "2014-09-10"
+        "date": "2014-10-15"
       },
       {
         "name": "Clean Code",
@@ -117,7 +117,7 @@
         "name": "Java Basics",
         "numberOfPages": 300,
         "author": "Some Author",
-        "date": "2020-01-15"
+        "date": "2020-03-01"
       },
       {
         "name": "Algorithms Unlocked",
@@ -170,7 +170,7 @@
         "name": "Spring Boot Up & Running",
         "numberOfPages": 420,
         "author": "Mark Heckler",
-        "date": "2021-07-20"
+        "date": "2021-09-14"
       }
     ]
   }

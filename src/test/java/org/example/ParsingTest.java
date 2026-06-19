@@ -1,0 +1,41 @@
+package org.example;
+
+import org.example.secondTask.ParsingStrategy.JsonParsClass;
+import org.example.secondTask.ParsingStrategy.TxtParsClass;
+import org.example.secondTask.Student;
+import org.junit.jupiter.api.Test;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class ParsingTest {
+
+    @Test
+    void compareTwoParsingMethods() throws IOException {
+        JsonParsClass jsonParsClass = new JsonParsClass();
+        TxtParsClass txtParsClass = new TxtParsClass();
+
+        File jsonFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\Student.json");
+        File txtFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\StudentsAndBooks.txt");
+
+
+        List<Student> listFromJson = jsonParsClass.getStudentFromFile(jsonFile);
+        List<Student> listFromTxt = txtParsClass.getStudentFromFile(txtFile);
+
+
+        System.out.println("JSON:");
+        listFromJson.forEach(System.out::println);
+
+        System.out.println("TXT:");
+        listFromTxt.forEach(System.out::println);
+
+        assertTrue(listFromJson.equals(listFromTxt));
+    }
+
+
+}

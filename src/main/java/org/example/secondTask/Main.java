@@ -17,8 +17,7 @@ public class Main
 
         StreamTask servise = new StreamTask();
 
-        File someFile = //new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\Student.json");
-                        new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\StudentsAndBooks.txt");
+        File someFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\StudentsAndBooks.txt");
 
         String[] sss = someFile.getName().split("\\.");
 

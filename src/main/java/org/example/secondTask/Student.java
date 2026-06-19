@@ -38,4 +38,16 @@ public class Student {
                 ", listOfBooks=" + listOfBooks +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        Student student = (Student) object;
+        return Objects.equals(name, student.name) && Objects.equals(listOfBooks, student.listOfBooks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, listOfBooks);
+    }
 }
