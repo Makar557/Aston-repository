@@ -1,4 +1,4 @@
-package org.example.secondTask;
+package org.Dubrovsky.AstonHomework.secondTask;
 
 import java.util.Collection;
 import java.util.Comparator;

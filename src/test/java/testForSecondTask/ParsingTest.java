@@ -1,14 +1,12 @@
-package org.example;
+package testForSecondTask;
 
-import org.example.secondTask.ParsingStrategy.JsonParsClass;
-import org.example.secondTask.ParsingStrategy.TxtParsClass;
-import org.example.secondTask.Student;
+import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.JsonParsClass;
+import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.TxtParsClass;
+import org.Dubrovsky.AstonHomework.secondTask.Student;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

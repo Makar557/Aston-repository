@@ -1,8 +1,8 @@
-package org.example;
+package testForSecondTask;
 
-import org.example.secondTask.Book;
-import org.example.secondTask.StreamTask;
-import org.example.secondTask.Student;
+import org.Dubrovsky.AstonHomework.secondTask.Book;
+import org.Dubrovsky.AstonHomework.secondTask.StreamTask;
+import org.Dubrovsky.AstonHomework.secondTask.Student;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;

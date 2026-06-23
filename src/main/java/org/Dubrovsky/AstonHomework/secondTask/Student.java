@@ -1,4 +1,4 @@
-package org.example.secondTask;
+package org.Dubrovsky.AstonHomework.secondTask;
 
 import java.util.*;
 
@@ -14,10 +14,6 @@ public class Student {
 
     public List<Book> getListOfBooks() {
         return listOfBooks;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Student(String name, List<Book> listOfBooks) {

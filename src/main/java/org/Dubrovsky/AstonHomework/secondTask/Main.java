@@ -1,8 +1,8 @@
-package org.example.secondTask;
+package org.Dubrovsky.AstonHomework.secondTask;
 
-import org.example.secondTask.ParsingStrategy.Context;
-import org.example.secondTask.ParsingStrategy.JsonParsClass;
-import org.example.secondTask.ParsingStrategy.TxtParsClass;
+import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.Context;
+import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.JsonParsClass;
+import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.TxtParsClass;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,6 +42,5 @@ public class Main
         }
 
         servise.resultOfFourthTask(students);
-        System.out.println("dd");
     }
 }
