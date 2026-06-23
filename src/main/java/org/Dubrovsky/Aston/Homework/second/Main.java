@@ -1,46 +1,60 @@
-package org.Dubrovsky.Aston.Homework.secondTask;
+package org.Dubrovsky.Aston.Homework.second;
 
-import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.Context;
-import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.JsonParsClass;
-import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.TxtParsClass;
+import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.Context;
+import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.JsonParsClass;
+import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.TxtParsClass;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class Main
-{
-    public static void main( String[] args )
-    {
+public class Main {
+    private static final String JSON = "json";
+    private static final String TXT = "txt";
+
+    public static void main(String[] args) {
+
+
         Context context = new Context();
 
-        StreamTask servise = new StreamTask();
+        Scanner scanner = new Scanner(System.in);
 
-        File someFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\java\\org\\example\\secondTask\\Files\\StudentsAndBooks.txt");
+        StreamTask service = new StreamTask();
 
-        String[] sss = someFile.getName().split("\\.");
+        System.out.println("Введите путь к файлу:");
+
+        String path = scanner.nextLine();
+
+        File file = new File(path);
+
+        String[] fileExtensionParts = file.getName().split("\\.");
+
+        if (fileExtensionParts.length == 1) {
+            throw new IllegalArgumentException("Файл должен иметь расширение");
+        }
 
         List<Student> students = new ArrayList<>();
 
-        if(sss[1].equals("json")){
+        if (fileExtensionParts[fileExtensionParts.length - 1].equals(JSON)) {
 
             context.setStrategy(new JsonParsClass());
             try {
-                students = context.executeParsing(someFile);
+                students = context.executeParsing(file);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        } else if (sss[1].equals("txt")) {
+        } else if (fileExtensionParts[fileExtensionParts.length - 1].equals(TXT)) {
 
             context.setStrategy(new TxtParsClass());
             try {
-                students = context.executeParsing(someFile);
+                students = context.executeParsing(file);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
 
-        servise.resultOfFourthTask(students);
+        service.resultOfFourthTask(students);
     }
 }

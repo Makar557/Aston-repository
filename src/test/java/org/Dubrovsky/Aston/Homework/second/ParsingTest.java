@@ -1,8 +1,7 @@
-package testForSecondTask;
+package org.Dubrovsky.Aston.Homework.second;
 
-import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.JsonParsClass;
-import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.TxtParsClass;
-import org.Dubrovsky.AstonHomework.secondTask.Student;
+import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.JsonParsClass;
+import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.TxtParsClass;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
