@@ -1,7 +1,7 @@
-package org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy;
+package org.Dubrovsky.Aston.Homework.second.ParsingStrategy;
 
-import org.Dubrovsky.AstonHomework.secondTask.Book;
-import org.Dubrovsky.AstonHomework.secondTask.Student;
+import org.Dubrovsky.Aston.Homework.second.Book;
+import org.Dubrovsky.Aston.Homework.second.Student;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class TxtParsClass implements StrategyOfParsing {
 
 
     @Override
-    public List<Student> getStudentFromFile(File file) throws IOException{
+    public List<Student> getStudentFromFile(File file) throws IOException {
 
         return buildStudents(Files.readAllLines(file.toPath()));
     }
@@ -27,13 +27,13 @@ public class TxtParsClass implements StrategyOfParsing {
 
         List<Book> tempBooks = new ArrayList<>();
 
-        for (String str : lines){
+        for (String str : lines) {
 
             String[] strings = str.split(":");
 
             if (strings[0].equals("STUDENT")) {
 
-                if(tempStudent != null){
+                if (tempStudent != null) {
                     addStudentIfValid(rezStudents, tempStudent, tempBooks);
                 }
 
@@ -56,9 +56,7 @@ public class TxtParsClass implements StrategyOfParsing {
         try {
             students.add(new Student(studentName, books));
         } catch (IllegalArgumentException e) {
-            System.out.printf(
-                    "The student with the name %s had less than 5 books and was therefore not added%n", studentName
-            );
+            System.out.printf("The student with the name %s had less than 5 books and was therefore not added%n", studentName);
         }
     }
 

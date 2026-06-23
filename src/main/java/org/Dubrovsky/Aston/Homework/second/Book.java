@@ -1,4 +1,4 @@
-package org.Dubrovsky.AstonHomework.secondTask;
+package org.Dubrovsky.Aston.Homework.second;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -42,12 +42,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", numberOfPages=" + numberOfPages +
-                ", author='" + author + '\'' +
-                ", date=" + date +
-                '}';
+        return "Book{" + "name='" + name + '\'' + ", numberOfPages=" + numberOfPages + ", author='" + author + '\'' + ", date=" + date + '}';
     }
 
     @Override

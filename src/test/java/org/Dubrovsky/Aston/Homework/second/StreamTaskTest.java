@@ -1,8 +1,5 @@
-package testForSecondTask;
+package org.Dubrovsky.Aston.Homework.second;
 
-import org.Dubrovsky.AstonHomework.secondTask.Book;
-import org.Dubrovsky.AstonHomework.secondTask.StreamTask;
-import org.Dubrovsky.AstonHomework.secondTask.Student;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
