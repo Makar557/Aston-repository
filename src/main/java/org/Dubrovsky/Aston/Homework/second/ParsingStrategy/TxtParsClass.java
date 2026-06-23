@@ -1,7 +1,7 @@
-package org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy;
+package org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy;
 
-import org.Dubrovsky.AstonHomework.secondTask.Book;
-import org.Dubrovsky.AstonHomework.secondTask.Student;
+import org.Dubrovsky.Aston.Homework.secondTask.Book;
+import org.Dubrovsky.Aston.Homework.secondTask.Student;
 
 import java.io.File;
 import java.io.IOException;

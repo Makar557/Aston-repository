@@ -1,4 +1,4 @@
-package org.Dubrovsky.AstonHomework.secondTask;
+package org.Dubrovsky.Aston.Homework.secondTask;
 
 import java.time.LocalDate;
 import java.util.Objects;

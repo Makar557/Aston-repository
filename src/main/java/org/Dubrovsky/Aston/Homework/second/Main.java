@@ -1,8 +1,8 @@
-package org.Dubrovsky.AstonHomework.secondTask;
+package org.Dubrovsky.Aston.Homework.secondTask;
 
-import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.Context;
-import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.JsonParsClass;
-import org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy.TxtParsClass;
+import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.Context;
+import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.JsonParsClass;
+import org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy.TxtParsClass;
 
 import java.io.File;
 import java.io.IOException;

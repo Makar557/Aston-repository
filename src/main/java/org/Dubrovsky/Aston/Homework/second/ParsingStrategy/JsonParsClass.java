@@ -1,9 +1,9 @@
-package org.Dubrovsky.AstonHomework.secondTask.ParsingStrategy;
+package org.Dubrovsky.Aston.Homework.secondTask.ParsingStrategy;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.Dubrovsky.AstonHomework.secondTask.Student;
+import org.Dubrovsky.Aston.Homework.secondTask.Student;
 
 
 import java.util.List;

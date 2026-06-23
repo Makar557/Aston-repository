@@ -1,6 +1,7 @@
-package org.Dubrovsky.AstonHomework.secondTask;
+package org.Dubrovsky.Aston.Homework.second;
 
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 
 public class Student {
 
@@ -29,10 +30,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", listOfBooks=" + listOfBooks +
-                '}';
+        return "Student{" + "name='" + name + '\'' + ", listOfBooks=" + listOfBooks + '}';
     }
 
     @Override
