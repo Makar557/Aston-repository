@@ -7,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +59,8 @@ public class TxtParsClass implements StrategyOfParsing {
         try {
             students.add(new Student(studentName, books));
         } catch (IllegalArgumentException e) {
-            System.out.printf("The student with the name %s had less than 5 books and was therefore not added%n", studentName);
+            System.out.printf("The student with the name %s had less than 5 " +
+                    "books and was therefore not added%n", studentName);
         }
     }
 
@@ -68,6 +68,8 @@ public class TxtParsClass implements StrategyOfParsing {
 
         String[] stringsBooks = book.split("\\|");
 
-        return new Book(Integer.parseInt(stringsBooks[1].trim()), stringsBooks[0].trim(), stringsBooks[2].trim(), LocalDate.parse(stringsBooks[3].trim()));
+        return new Book(Integer.parseInt(stringsBooks[1].trim()),
+                stringsBooks[0].trim(), stringsBooks[2].trim(),
+                LocalDate.parse(stringsBooks[3].trim()));
     }
 }

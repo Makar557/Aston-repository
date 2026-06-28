@@ -42,14 +42,24 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "name='" + name + '\'' + ", numberOfPages=" + numberOfPages + ", author='" + author + '\'' + ", date=" + date + '}';
+        return "Book{" +
+                "name='" +
+                name + '\'' + ", numberOfPages=" +
+                numberOfPages + ", author='" +
+                author + '\'' + ", date=" + date + '}';
     }
 
     @Override
     public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) return false;
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+
         Book book = (Book) object;
-        return numberOfPages == book.numberOfPages && Objects.equals(name, book.name) && Objects.equals(author, book.author) && Objects.equals(date, book.date);
+        return numberOfPages == book.numberOfPages &&
+                Objects.equals(name, book.name) &&
+                Objects.equals(author, book.author) &&
+                Objects.equals(date, book.date);
     }
 
     @Override
