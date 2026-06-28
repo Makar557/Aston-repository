@@ -17,8 +17,8 @@ public class ParsingTest {
         JsonParsClass jsonParsClass = new JsonParsClass();
         TxtParsClass txtParsClass = new TxtParsClass();
 
-        File jsonFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\resources\\Student.json");
-        File txtFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\resources\\StudentsAndBooks.txt");
+        File jsonFile = new File("src\\main\\resources\\Student.json");
+        File txtFile = new File("src\\main\\resources\\StudentsAndBooks.txt");
 
 
         List<Student> listFromJson = jsonParsClass.getStudentFromFile(jsonFile);
