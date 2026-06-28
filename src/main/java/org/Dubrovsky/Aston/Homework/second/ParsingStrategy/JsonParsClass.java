@@ -6,8 +6,8 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.Dubrovsky.Aston.Homework.second.Student;
 
 
+import java.io.InputStream;
 import java.util.List;
-import java.io.File;
 import java.io.IOException;
 
 public class JsonParsClass implements StrategyOfParsing {
@@ -15,7 +15,7 @@ public class JsonParsClass implements StrategyOfParsing {
     private static final ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
     @Override
-    public List<Student> getStudentFromFile(File file) throws IOException {
+    public List<Student> getStudentFromFile(InputStream file) throws IOException {
         return mapper.readValue(file, new TypeReference<List<Student>>() {
         });
     }

@@ -3,8 +3,10 @@ package org.Dubrovsky.Aston.Homework.second.ParsingStrategy;
 import org.Dubrovsky.Aston.Homework.second.Book;
 import org.Dubrovsky.Aston.Homework.second.Student;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,9 +16,11 @@ public class TxtParsClass implements StrategyOfParsing {
 
 
     @Override
-    public List<Student> getStudentFromFile(File file) throws IOException {
+    public List<Student> getStudentFromFile(InputStream inputStream) throws IOException {
 
-        return buildStudents(Files.readAllLines(file.toPath()));
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            return buildStudents(reader.lines().toList());
+        }
     }
 
     private List<Student> buildStudents(List<String> lines) {
