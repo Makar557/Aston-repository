@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,12 +18,16 @@ public class ParsingTest {
         JsonParsClass jsonParsClass = new JsonParsClass();
         TxtParsClass txtParsClass = new TxtParsClass();
 
-        File jsonFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\resources\\Student.json");
-        File txtFile = new File("D:\\Aston\\Dubrovsky\\Homework\\src\\main\\resources\\StudentsAndBooks.txt");
+        InputStream jsonStream =
+                getClass().getClassLoader()
+                        .getResourceAsStream("Student.json");
 
+        InputStream txtStream =
+                getClass().getClassLoader()
+                        .getResourceAsStream("StudentsAndBooks.txt");
 
-        List<Student> listFromJson = jsonParsClass.getStudentFromFile(jsonFile);
-        List<Student> listFromTxt = txtParsClass.getStudentFromFile(txtFile);
+        List<Student> listFromJson = jsonParsClass.getStudentFromFile(jsonStream);
+        List<Student> listFromTxt = txtParsClass.getStudentFromFile(txtStream);
 
 
         System.out.println("JSON:");

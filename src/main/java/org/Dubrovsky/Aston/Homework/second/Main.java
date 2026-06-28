@@ -5,56 +5,55 @@ import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.JsonParsClass;
 import org.Dubrovsky.Aston.Homework.second.ParsingStrategy.TxtParsClass;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     private static final String JSON = "json";
     private static final String TXT = "txt";
 
     public static void main(String[] args) {
 
-
-        Context context = new Context();
-
         Scanner scanner = new Scanner(System.in);
-
-        StreamTask service = new StreamTask();
 
         System.out.println("Введите путь к файлу:");
 
         String path = scanner.nextLine();
 
-        File file = new File(path);
+        String extension = getExtension(path);
 
-        String[] fileExtensionParts = file.getName().split("\\.");
+        Context context = new Context();
 
-        if (fileExtensionParts.length == 1) {
+        if (extension.equals(JSON)) {
+            context.setStrategy(new JsonParsClass());
+        } else if (extension.equals(TXT)) {
+            context.setStrategy(new TxtParsClass());
+        } else {
+            throw new IllegalArgumentException("Неподдерживаемое расширение файла: " + extension);
+        }
+
+        List<Student> students;
+
+        try (InputStream inputStream = new FileInputStream(new File(path))) {
+            students = context.executeParsing(inputStream);
+        } catch (IOException e) {
+            throw new RuntimeException("Ошибка чтения файла", e);
+        }
+
+        StreamTask service = new StreamTask();
+        service.resultOfFourthTask(students);
+    }
+
+    private static String getExtension(String path) {
+        int dotIndex = path.lastIndexOf('.');
+        if (dotIndex == -1 || dotIndex == path.length() - 1) {
             throw new IllegalArgumentException("Файл должен иметь расширение");
         }
-
-        List<Student> students = new ArrayList<>();
-
-        if (fileExtensionParts[fileExtensionParts.length - 1].equals(JSON)) {
-
-            context.setStrategy(new JsonParsClass());
-            try {
-                students = context.executeParsing(file);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (fileExtensionParts[fileExtensionParts.length - 1].equals(TXT)) {
-
-            context.setStrategy(new TxtParsClass());
-            try {
-                students = context.executeParsing(file);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        service.resultOfFourthTask(students);
+        return path.substring(dotIndex + 1).toLowerCase();
     }
 }
