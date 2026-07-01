@@ -1,5 +1,7 @@
 package org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy;
 
+import java.math.BigDecimal;
+
 public class CheckoutService {
 
     private PaymentStrategy paymentStrategy;
@@ -9,7 +11,7 @@ public class CheckoutService {
         this.paymentStrategy = paymentStrategy;
     }
 
-    public void checkout(double amount) {
+    public void checkout(BigDecimal amount) {
 
         paymentStrategy.pay(amount);
 

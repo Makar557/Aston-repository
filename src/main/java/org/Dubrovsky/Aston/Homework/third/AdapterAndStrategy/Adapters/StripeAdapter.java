@@ -3,6 +3,8 @@ package org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.Adapters;
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.APIs.StripeApi;
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.PaymentStrategy;
 
+import java.math.BigDecimal;
+
 public class StripeAdapter implements PaymentStrategy {
 
     private final StripeApi stripeApi;
@@ -12,7 +14,7 @@ public class StripeAdapter implements PaymentStrategy {
     }
 
     @Override
-    public void pay(double amount) {
+    public void pay(BigDecimal amount) {
         stripeApi.makePayment(amount);
     }
 }
