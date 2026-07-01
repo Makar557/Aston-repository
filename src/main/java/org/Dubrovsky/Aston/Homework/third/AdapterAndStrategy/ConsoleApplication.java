@@ -1,7 +1,6 @@
 package org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy;
 
 import java.math.BigDecimal;
-import java.util.Scanner;
 
 public class ConsoleApplication {
 

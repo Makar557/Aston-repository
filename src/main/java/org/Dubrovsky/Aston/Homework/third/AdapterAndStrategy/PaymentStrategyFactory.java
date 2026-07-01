@@ -7,10 +7,8 @@ import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.Adapters.PaypalAdap
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.Adapters.StripeAdapter;
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.Adapters.TBankAdapter;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.logging.Handler;
 
 public class PaymentStrategyFactory {
 
@@ -18,10 +16,10 @@ public class PaymentStrategyFactory {
             PaymentType.STRIPE, new StripeAdapter(new StripeApi()),
             PaymentType.PAYPAL, new PaypalAdapter(new PaypalApi()),
             PaymentType.TBANK, new TBankAdapter(new TBankApi())
-            );
+    );
 
     public static PaymentStrategy fromValue(PaymentType type) throws NoSuchElementException {
-        if(!choiceToStrategy.containsKey(type)) {
+        if (!choiceToStrategy.containsKey(type)) {
             throw new NoSuchElementException();
         }
         return choiceToStrategy.get(type);

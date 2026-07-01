@@ -25,19 +25,19 @@ public class MenuService {
 
     }
 
-        public BigDecimal readAmount() throws NumberFormatException {
+    public BigDecimal readAmount() throws NumberFormatException {
 
-            System.out.print("Введите сумму: ");
+        System.out.print("Введите сумму: ");
 
-            return new BigDecimal(scanner.nextLine());
-        }
+        return new BigDecimal(scanner.nextLine());
+    }
 
-        public void printMenu() {
-            System.out.println("\nВыберите способ оплаты:");
-            System.out.println("1 - STRIPE");
-            System.out.println("2 - PAYPAL");
-            System.out.println("3 - TBANK");
-            System.out.println("0 - выход");
-        }
+    public void printMenu() {
+        System.out.println("\nВыберите способ оплаты:");
+        System.out.println("1 - STRIPE");
+        System.out.println("2 - PAYPAL");
+        System.out.println("3 - TBANK");
+        System.out.println("0 - выход");
+    }
 
 }

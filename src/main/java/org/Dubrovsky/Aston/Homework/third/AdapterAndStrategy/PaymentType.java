@@ -18,7 +18,7 @@ public enum PaymentType {
         return Arrays.stream(PaymentType.values())
                 .filter(chose -> chose.value.equals(value))
                 .findFirst().orElseThrow(
-                () -> new IllegalArgumentException("Неизвестный тип оплаты: " + value));
+                        () -> new IllegalArgumentException("Неизвестный тип оплаты: " + value));
     }
 
 }
