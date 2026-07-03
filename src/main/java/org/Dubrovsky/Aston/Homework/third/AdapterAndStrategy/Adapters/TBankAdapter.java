@@ -3,6 +3,8 @@ package org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.Adapters;
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.APIs.TBankApi;
 import org.Dubrovsky.Aston.Homework.third.AdapterAndStrategy.PaymentStrategy;
 
+import java.math.BigDecimal;
+
 public class TBankAdapter implements PaymentStrategy {
 
     private final TBankApi tBankApi;
@@ -12,9 +14,9 @@ public class TBankAdapter implements PaymentStrategy {
     }
 
     @Override
-    public void pay(double amount) {
+    public void pay(BigDecimal amount) {
 
-        long kopeck = (long) amount;
+        BigDecimal kopeck = amount;
 
         tBankApi.createTransaction(kopeck);
     }
