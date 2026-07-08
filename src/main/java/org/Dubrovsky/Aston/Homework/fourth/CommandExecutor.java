@@ -5,7 +5,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class CommandExecutor {
 
-    private final ThreadTools tools = new ThreadTools();
+    private final DeadLock dead = new DeadLock();
+    private final LiveLock live = new LiveLock();
+    private final OneAndTwoPrinter oneAndTwo = new OneAndTwoPrinter();
 
     private final Object deadlockLockA = new Object();
     private final Object deadlockLockB = new Object();
@@ -13,16 +15,19 @@ public class CommandExecutor {
     private final ReentrantLock livelockLockA = new ReentrantLock();
     private final ReentrantLock livelockLockB = new ReentrantLock();
 
-    private final Map<String, Runnable> commands = Map.of(
-            "makeDL", () -> tools.makeDeadlock(deadlockLockA, deadlockLockB),
-            "makeLL", () -> tools.makeLiveLock(livelockLockA, livelockLockB),
-            "printOneAndTwo", () -> tools.printOneAndTwo(deadlockLockA));
+    private final Map<Commands, Runnable> commands = Map.of(
+            Commands.makeDL, () -> dead.invoke(deadlockLockA, deadlockLockB),
+            Commands.makeLL, () -> live.invoke(livelockLockA, livelockLockB),
+            Commands.printOneAndTwo, () -> oneAndTwo.invoke(deadlockLockA));
 
     public void getMethod(String chose) {
-        if (commands.get(chose) == null) {
-            System.out.println("Неизвестная команда");
+
+        Runnable command;
+        try {
+            command = commands.get(Commands.getCommands(chose));
+        } catch (IllegalArgumentException e) {
             return;
         }
-        commands.get(chose).run();
+        command.run();
     }
 }
